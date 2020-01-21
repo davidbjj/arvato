@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Client</groupId>
+	<artifactId>Client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<dependencies>
+					<dependency>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+						<version>1.2.16</version>
+					</dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+						<version>1.6.4</version>
+						<scope>runtime</scope>
+					</dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+						<version>1.6.4</version>
+						<scope>compile</scope>
+					</dependency>
+
+					<!-- add commons logging to slf4j bridge to classpath -->
+					<!-- acts as jcl but routes commons-logging calls to slf4j -->
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>jcl-over-slf4j</artifactId>
+						<version>1.6.4</version>
+						<scope>runtime</scope>
+					</dependency>
+					<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+					<dependency>
+						<groupId>commons-codec</groupId>
+						<artifactId>commons-codec</artifactId>
+						<version>1.9</version>
+					</dependency>
+
+
+				</dependencies>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
